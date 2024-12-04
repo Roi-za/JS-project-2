@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finnkino Movie Schedule</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Finnkino Movie Schedule</h1>
+  </header>
+  <main>
+    <section>
+      <label for="areaSelect">Select a Theatre Area:</label>
+      <select id="areaSelect"></select>
+      <label for="datePicker">Select a Date:</label>
+      <input type="date" id="datePicker">
+      <button id="fetchScheduleBtn">Fetch Schedule</button>
+    </section>
+    <section>
+      <label for="searchInput">Search by Movie Title:</label>
+      <input type="text" id="searchInput" placeholder="Type movie name...">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect">
+        <option value="time">Showtime</option>
+        <option value="title">Title</option>
+      </select>
+    </section>
+    <section id="resultsContainer"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="movieModal">
+    <div id="modalContent">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <p id="modalDuration"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

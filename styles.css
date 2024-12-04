@@ -1,0 +1,158 @@
+/* Perusasetukset ja väriteema */
+:root {
+    --primary-color: #1c1b29;
+    --secondary-color: #611d1d;
+    --background-color: #f5f5f5;
+    --card-bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #00d1b2;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section {
+    margin-bottom: 1.5em;
+  }
+  
+  select, button, input {
+    padding: 0.75em;
+    margin-right: 0.5em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  #resultsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5em;
+    margin-top: 1.5em;
+  }
+  
+  .movieCard {
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .movieCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movieCard img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .movieCard h3 {
+    margin: 0.5em;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+  }
+  
+  .movieCard p {
+    margin: 0.5em;
+    font-size: 0.9em;
+  }
+  
+  .error {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+  
+  #movieModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #modalContent {
+    background: white;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #modalContent h2 {
+    color: var(--secondary-color);
+  }
+  
+  #closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 600px) {
+    main {
+      padding: 1em;
+    }
+  
+    .movieCard {
+      width: 100%;
+    }
+  
+    button, select, input {
+      margin-bottom: 0.5em;
+    }
+  }
+  
